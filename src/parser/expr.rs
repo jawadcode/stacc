@@ -77,9 +77,10 @@ impl Parser<'_> {
                 TokenKind::Eof | TokenKind::RightParen | TokenKind::Newline => break,
                 _ => {
                     let token = self.next_token().unwrap();
-                    return Err(
-                        self.fmt_error(token.span, "Expected operator or terminator".to_string())
-                    );
+                    return Err(self.fmt_error(
+                        token.span,
+                        format!("Expected operator or terminator, got {}", token.kind),
+                    ));
                 }
             };
 
