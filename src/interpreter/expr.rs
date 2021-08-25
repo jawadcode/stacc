@@ -77,7 +77,7 @@ impl Interpreter {
         let expr = self.eval_expr(expr)?;
         Ok(match op {
             TokenKind::Minus => Value::Number(-expr.to_number()?),
-            TokenKind::Not => Value::Bool(bool::from(expr)),
+            TokenKind::Not => Value::Bool(!bool::from(expr)),
             _ => unreachable!(),
         })
     }
