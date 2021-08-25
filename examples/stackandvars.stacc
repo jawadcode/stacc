@@ -1,0 +1,6 @@
+set a 69
+set b 420
+print a
+print b
+push a + b
+print pop

@@ -1,0 +1,6 @@
+begin hello: name
+    print "hello " + name
+end
+
+push "jawad"
+call hello

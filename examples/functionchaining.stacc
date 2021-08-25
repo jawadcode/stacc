@@ -1,0 +1,14 @@
+begin add1: x
+    push x + 1
+end
+
+begin double: x
+    push x * 2
+end
+
+push 42
+call add1
+call double
+call add1
+call double
+print pop
